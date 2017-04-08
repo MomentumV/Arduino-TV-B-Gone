@@ -1,18 +1,16 @@
 /*
-Last Updated: 22 Oct. 2016
-By Gabriel Staples, http://www.ElectricRCAircraftGuy.com 
--My contact info is available by clicking the "Contact Me" tab at the top of my website.
+Last Updated: 8 April 2017
+by Mordecai Veldt mordecai.veldt@gmail.com
+CC-BY-SA 4
 
 ------------------------------------------------------------  
 Semver (http://semver.org/) VERSION HISTORY (newest on top):  
 (date format: yyyymmdd; ex: 20161022 is 22 Oct. 2016)  
 ------------------------------------------------------------  
- - 20161022 - v1.3 - Semver versioning implemented; various code updates, clarifications, & comment additions, and changes to fix PROGMEM incompatibilities so it will now compile with latest versions of gcc compiler; also improved blink indicator routines & added the ability to stop the code-sending sequence once it has begun; by Gabriel Staples (http://www.ElectricRCAircraftGuy.com)  
- - 20101023 - v1.2 - Latest version posted by Ken Shirriff on his website here (http://www.righto.com/2010/11/improved-arduino-tv-b-gone.html) (direct download link here: http://arcfn.com/files/arduino-tv-b-gone-1.2.zip)  
- - 20101018 - v1.2 - Universality for EU (European Union) & NA (North America) added by Mitch Altman; sleep mode added by ka1kjz  
- - 2010____ - v1.2 - code ported to Arduino; by Ken Shirriff  
- - 20090816 - v1.2 - for ATtiny85v, by Mitch Altman & Limor Fried (https://www.adafruit.com/), w/some code by Kevin Timmerman & Damien Good  
+ - 20170408 - v1.1 - code initially forked from shirriff/Arduino-TV-B-Gone; much much credit is due there to Ken, Gabriel Staples www.ElectricRCAircraftGuy.com, and of course to Mitch Altman & Limor Fried
 
+
+<--- source history --->
 TV-B-Gone for Arduino version 1.2, Oct 23 2010
 Ported to Arduino by Ken Shirriff
 See here: http://www.arcfn.com/2009/12/tv-b-gone-for-arduino.html and here: http://www.righto.com/2010/11/improved-arduino-tv-b-gone.html (newer)
@@ -31,6 +29,7 @@ TV-B-Gone Firmware version 1.2
 
 With some code from:
 Kevin Timmerman & Damien Good 7-Dec-07
+</--- source history ---/>
 
 ------------------------------------------------------------
 CIRCUIT:
@@ -45,7 +44,8 @@ The hardware for this project uses an Arduino:
 ------------------------------------------------------------
 LICENSE:
 ------------------------------------------------------------
-Distributed under Creative Commons 2.5 -- Attribution & Share Alike
+Distributed under Creative Commons Attribution-Share Alike 4.0 International (CC BY-SA 4.0) https://creativecommons.org/licenses/by-sa/4.0/
+ 
 
 */
 
