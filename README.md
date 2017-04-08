@@ -7,47 +7,23 @@ By Gabriel Staples, http://www.ElectricRCAircraftGuy.com
 -see Arduino_TV_B_Gone.ino for full version history 
 
 Semver (http://semver.org/) VERSION HISTORY (newest on top):  
-(date format: yyyymmdd; ex: 20161022 is 22 Oct. 2016)  
- - 20161022 - v1.3 - Semver versioning implemented; various code updates, clarifications, & comment additions, and changes to fix PROGMEM incompatibilities so it will now compile with latest versions of gcc compiler; also improved blink indicator routines & added the ability to stop the code-sending sequence once it has begun; by Gabriel Staples (http://www.ElectricRCAircraftGuy.com)  
- - 20101023 - v1.2 - Latest version posted by Ken Shirriff on his website here (http://www.righto.com/2010/11/improved-arduino-tv-b-gone.html) (direct download link here: http://arcfn.com/files/arduino-tv-b-gone-1.2.zip)  
- - 20101018 - v1.2 - Universality for EU (European Union) & NA (North America) added by Mitch Altman; sleep mode added by ka1kjz  
- - 2010____ - v1.2 - code ported to Arduino; by Ken Shirriff  
- - 20090816 - v1.2 - for ATtiny85v, by Mitch Altman & Limor Fried (https://www.adafruit.com/), w/some code by Kevin Timmerman & Damien Good  
+(date format: yyyymmdd; ex: 20161022 is 22 Oct. 2016)
+ - 20170408 - v1.1 - code initially forked from shirriff/Arduino-TV-B-Gone; much much credit is due there to Ken, Gabriel Staples www.ElectricRCAircraftGuy.com, and of course to Mitch Altman & Limor Fried  
 
 # Description:  
-This code is the TV-B-Gone library ported to run on the Arduino.  
+This code implements a circuit very similar to the TV-B-Gone, using the Adafruit Trinket. I will be implementing and testing with a 3.3V Trinket (https://www.adafruit.com/products/1500), but it is available in 5 Volt as well (https://www.adafruit.com/products/1501)
+Although the trinket uses a ATTINY85, just like the original TV-B-Gone, the bootloader on the chip that allows it to be programed directly means our program space is down to ~5kb from ~8kb. This means that we will have to sacrifice some of the codes that it knows.
+For my particular purposes, I only care about ~3 codes. However, I do intend to implement a helper utility to let you select what codes are important for you.
+The default library will include as many of the most common codes as I can fit.
+
+
 
 # Background:
--see Arduino_TV_B_Gone.ino for latest version history & more details. 
+-see Arduino_TV_B_Gone.ino for latest version history & more details, see original project code at https://github.com/shirriff/Arduino-TV-B-Gone
 
-Updated code to fix PROGMEM incompatiblities--now works with latest versions of gcc compiler & Arduino IDE
--with other improvements also
-By Gabriel Staples (http://www.ElectricRCAircraftGuy.com)
-
-This port to Arduino is by Ken Shirriff.  
-For background details on the Arduino port, how to build it, and how to use it, see:  
- * http://www.arcfn.com/2009/12/tv-b-gone-for-arduino.html and here:
- * http://www.righto.com/2010/11/improved-arduino-tv-b-gone.html (newer)
-
-For information on the original TV-B-Gone see:  
-http://www.tvbgone.com/. Mitch Altman is the inventor of the original TV-B-Gone.    
-
-The original code is:  
-TV-B-Gone Firmware version 1.2  
- for use with ATtiny85v and v1.2 hardware  
- (c) Mitch Altman + Limor Fried 2009  
- Last edits, August 16 2009  
-
-Added universality for EU or NA, and Sleep mode to Ken's Arduino port.  
- -- Mitch Altman  18-Oct-2010  
-Thanks to ka1kjz for the code for adding Sleep  
-    <http://www.ka1kjz.com/561/adding-sleep-to-tv-b-gone-code/>  
-
-With some code from:  
-Kevin Timmerman & Damien Good 7-Dec-07  
 
 # License:  
-Distributed under Creative Commons 2.5 -- Attribution & Share Alike  
+Distributed under Creative Commons Attribution & Share Alike 4.0 International
 
 # CIRCUIT:  
 -NB: SEE "main.h" TO VERIFY DEFINED PINS TO USE  
