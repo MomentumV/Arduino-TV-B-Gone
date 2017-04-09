@@ -49,6 +49,7 @@ Distributed under Creative Commons Attribution-Share Alike 4.0 International (CC
 
 */
 
+/* turn off all the code
 #include "WORLD_IR_CODES.h"
 #include <avr/sleep.h>
 
@@ -95,7 +96,7 @@ This project transmits a bunch of TV POWER codes, one right after the other,
 /*
 This project is a good example of how to use the AVR chip timers.
  */
-
+/* turn off all the code
 extern const IrCode* const NApowerCodes[] PROGMEM;
 extern const IrCode* const EUpowerCodes[] PROGMEM;
 extern uint8_t num_NAcodes, num_EUcodes;
@@ -103,6 +104,7 @@ extern uint8_t num_NAcodes, num_EUcodes;
 /* This function is the 'workhorse' of transmitting IR codes.
  Given the on and off times, it turns on the PWM output on and off
  to generate one 'pair' from a long code. Each code has ~50 pairs! */
+/* turn off all the code
 void xmitCodeElement(uint16_t ontime, uint16_t offtime, uint8_t PWM_code )
 {
   TCNT2 = 0;
@@ -140,7 +142,7 @@ void xmitCodeElement(uint16_t ontime, uint16_t offtime, uint8_t PWM_code )
  Once code_ptr is set up to point to the right part of memory,
  this function will let us read 'count' bits at a time which
  it does by reading a byte into 'bits_r' and then buffering it. */
-
+/* turn off all the code
 uint8_t bitsleft_r = 0;
 uint8_t bits_r=0;
 PGM_P code_ptr;
@@ -197,7 +199,7 @@ The C compiler creates code that will transfer all constants into RAM when
  that index into another table in ROM that actually stores the on/off times
  const PGM_P time_ptr = (PGM_P)pgm_read_word(code_ptr);
  */
-
+/* turn off all the code
 #define BUTTON_PRESSED 0 
 
 uint16_t ontime, offtime;
@@ -405,7 +407,7 @@ void loop()
 
 /****************************** LED AND DELAY FUNCTIONS ********/
 
-
+/* turn off all the code
 // This function delays the specified number of 10 microseconds
 // it is 'hardcoded' and is calibrated by adjusting DELAY_CNT
 // in main.h Unless you are changing the crystal from 8MHz, dont
@@ -449,6 +451,7 @@ void quickflashLEDx( uint8_t x ) {
 
 
 /****************************** SLEEP and WAKE FUNCTIONS ********/
+/* turn off all the code
 // from kaqkjz:
 // http://www.ka1kjz.com/561/adding-sleep-to-tv-b-gone-code/
 
@@ -474,3 +477,17 @@ void wakeUpNow()
 {
   // any needed wakeup code can be placed here
 }
+*/
+void setup()
+{
+ DDRB = 0x02; // set PB1 as an output
+ TCCR1 = 0x9F; // configure counter control register
+ OCR1C = 100; // set LED blink rate about 2 Hz
+}
+void loop()
+{
+}
+
+  
+
+
